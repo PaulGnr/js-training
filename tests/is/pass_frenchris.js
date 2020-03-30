@@ -1,11 +1,15 @@
 is.num = el => typeof el === 'number'
-is.nan = el => typeof el === 'Nan'
 is.str = el => typeof el === 'string'
 is.bool = el => typeof el === 'boolean'
 is.undef = el => typeof el === 'undefined'
-is.def = el => typeof el === 'defined'
-is.arr = el => typeof el === 'array'
-is.obj = el => typeof el === 'object' || typeof el === null
+is.arr = el => Array.isArray(el)
 is.fun = el => typeof el === 'function'
-is.truthy = el => el == true
-is.falsy = el => el == false
+
+is.nan = el => Number.isNaN(el)
+
+is.def = el => typeof el !== 'undefined'
+
+is.truthy = el => el
+is.falsy = el => !el
+
+is.obj = el => el && (el.constructor === Object || el.constructor === undefined)

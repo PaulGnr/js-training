@@ -23,6 +23,8 @@ Add new function properties to the object `is`` to check a value type
 - https://devdocs.io/javascript/operators/typeof
 - https://developer.mozilla.org/en-US/docs/Glossary/Truthy
 - https://developer.mozilla.org/en-US/docs/Glossary/Falsy
+- https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/constructor
+- https://stackoverflow.com/questions/15518328/creating-js-object-with-object-createnull
 
 */
 
@@ -32,28 +34,33 @@ const is = {}
 
 // /*/ // ⚡
 export const tests = []
-const t = (f) => tests.push(f)
+const t = f => tests.push(f)
 
 // setup context for following tests
 
-const match = ({eq}, fun, values) => eq(vals().filter(fun), values)
+const match = ({ eq }, fun, values) => eq(vals().filter(fun), values)
 
-t((_) => match(_, is.num, [0, NaN]))
-t((_) => match(_, is.nan, [NaN]))
-t((_) => match(_, is.str, ['', '💩']))
-t((_) => match(_, is.bool, [true]))
-t((_) => match(_, is.undef, [undefined, undefined]))
-t((_) => match(_, is.arr, [[], [1, Array(1), [], 2]]))
-t((_) => match(_, is.obj, [{}, { length: 10 }, Object.create(null)]))
-t((_) => match(_, is.fun, [t, console.log]))
-t((_) => match(_, is.falsy, [0, NaN, '', undefined, null, void 0]))
+t(_ => match(_, is.num, [0, NaN]))
+t(_ => match(_, is.nan, [NaN]))
+t(_ => match(_, is.str, ['', '💩']))
+t(_ => match(_, is.bool, [true]))
+t(_ => match(_, is.undef, [undefined, undefined]))
+t(_ => match(_, is.arr, [[], [1, Array(1), [], 2]]))
+t(_ => match(_, is.obj, [{}, { length: 10 }, Object.create(null)]))
+t(_ => match(_, is.fun, [t, console.log]))
+t(_ => match(_, is.falsy, [0, NaN, '', undefined, null, void 0]))
 
 // is.def
-t(() => !vals().filter(is.def).includes(undefined))
+t(
+  () =>
+    !vals()
+      .filter(is.def)
+      .includes(undefined)
+)
 t(() => vals().filter(is.def).length === vals().length - 2)
 
 // is.truthy
-t((_) =>
+t(_ =>
   match(_, is.truthy, [
     true,
     '💩',
@@ -63,7 +70,7 @@ t((_) =>
     [1, Array(1), [], 2],
     { length: 10 },
     Object.create(null),
-    console.log,
+    console.log
   ])
 )
 
@@ -82,7 +89,7 @@ const vals = () => [
   Object.create(null),
   null,
   console.log,
-  void 0,
+  void 0
 ]
 
 Object.freeze(tests)
