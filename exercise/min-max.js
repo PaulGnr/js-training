@@ -3,12 +3,12 @@
 
 ### Instructions
 
-Create the `max` function that takes 2 number as arguments
+Create the `max` function that takes 2 numbers as arguments
 and returns the greatest
 
 > You must not just use `Math.max`, make your own.
 
-Create the `min` function that takes 2 number as arguments
+Create the `min` function that takes 2 numbers as arguments
 and returns the lowest
 
 > You must not just use `Math.min`, make your own.
@@ -29,7 +29,7 @@ Math.min = Math.max = undefined
 
 // /*/ // ⚡
 export const tests = []
-const t = (f) => tests.push(f)
+const t = f => tests.push(f)
 
 t(() => max(0, -2) === 0)
 t(() => max(-1, 10) === 10)
