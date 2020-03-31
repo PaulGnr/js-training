@@ -4,11 +4,15 @@
 ### Instructions
 
 Create 3 functions:
-- `indexOf` that return the index of the first occurence of a value
-- `lastIndexOf` that return the index of the last occurence of a value
-- `includes` that return true if the value was found in the array
+- `indexOf` that returns the index of the first occurence of a value
+in an array
+- `lastIndexOf` that returns the index of the last occurence of a value
+in an array
+- `includes` that returns true if the value was found in the array
+,false otherwise
 
-> If a value is not found, the returned index is -1
+> If a value is not found, for `indexOf` or `lastIndexOf`
+the function returns -1
 
 > `indexOf` and `lastIndexOf` takes an additionnal `fromIndex` argument
 > that allow you to begin searching from a specific index.
