@@ -9,6 +9,8 @@ Create a function for each rounding math functions:
 - floor (like `Math.floor`)
 - trunc (like `Math.trunc`)
 
+Converting into a string is not allowed
+
 
 ### Notions
 
