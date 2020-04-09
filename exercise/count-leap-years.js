@@ -5,12 +5,13 @@
 
 Make a `countLeapYears` functions that takes a date
 and returns the number of leap years since year 1
+(assume that this measure was implemented since year 1)
 
 // /*/ // ⚡
 
 // /*/ // ⚡
 export const tests = []
-const t = (f) => tests.push(f)
+const t = f => tests.push(f)
 
 t(() => countLeapYears(new Date('0001-12-01')) === 0)
 t(() => countLeapYears(new Date('1664-08-09')) === 403)
