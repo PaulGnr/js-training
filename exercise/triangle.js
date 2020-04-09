@@ -5,8 +5,8 @@
 ### Instructions
 
 Create a `triangle` function that takes a string and a number as parameters
-and return a triangle constructed by the string passed as argument and with the depth
-of the number passed as argument.
+and returns a triangle constructed with the string passed as first argument,
+and with the depth of the number passed as second argument.
 
 ### Output example
 

@@ -3,7 +3,7 @@
 
 ### Instructions
 
-Create the `Get` function.
+Create the `get` function.
 It takes 2 arguments:
   - `src` an object
   - `path` a string

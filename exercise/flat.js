@@ -3,7 +3,7 @@
 
 ### Instructions
 
-Create the `flat` functions that works like the `.flat` array method
+Create the `flat` function that works like the `.flat` array method
 
 
 ### Notions
