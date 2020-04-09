@@ -4,7 +4,7 @@
 
 ### Instructions
 
-Create a `nasa` function that takes a number as parameter and returns all 
+Create a `nasa` function that takes a number as parameter and returns all
 numbers from 1 to the number passed as parameter, with three exception.
 
 - For numbers divisible by 3, add 'NA'.
@@ -12,6 +12,8 @@ numbers from 1 to the number passed as parameter, with three exception.
 - For numbers divisible by 5, add 'SA'.
 
 - For the number that are divisible by 3 and 5 add 'NASA'.
+
+example: 15 returns "1 2 NA 4 SA NA 7 8 NA SA 11 NA 13 14 NASA"
 
 
 ### Notions
